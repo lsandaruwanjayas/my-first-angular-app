@@ -1,5 +1,7 @@
 # MyFirstAngularApp
 
+Live preview: https://clinquant-yeot-761f82.netlify.app
+
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.1.
 
 ## Development server
