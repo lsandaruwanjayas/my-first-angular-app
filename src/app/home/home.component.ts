@@ -9,6 +9,7 @@ import { HousingLocation } from '../housinglocation';
 //In home.component.ts, in @Component, update the template property
 //update the imports property of the @Component metadata by adding HousingLocationComponent
 //Update the template property of the @Component metadata to include a reference to the <app-housing-location> tag
+//Update the HomeComponent template
 @Component({
   selector: 'app-home',
   imports: [HousingLocationComponent, CommonModule],
@@ -19,7 +20,7 @@ import { HousingLocation } from '../housinglocation';
     </form>
   </section>
   <section class="results">
-      <app-housing-location></app-housing-location>
+      <app-housing-location [housingLocation]="housingLocation"></app-housing-location>
     </section>
   `,
   styleUrls: ['./home.component.css'],
