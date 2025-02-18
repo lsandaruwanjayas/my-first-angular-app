@@ -44,10 +44,14 @@ export class HomeComponent {
   
   //In HomeComponent, add the following code to inject the new service and initialize the data for the ap
   housingService: HousingService= inject(HousingService)
+  //update the constructor to use the new asynchronous version of the getAllHousingLocations method.
   constructor() {
-    this.housingLocationList = this.housingService.getAllHousingLocations();
+    this.housingService.getAllHousingLocations().then((housingLocationList: HousingLocation[]) => {
+      this.housingLocationList = housingLocationList;
+      this.filteredLocationList = this.housingLocationList;
+    });
     //The filteredLocationList should contain the total set of housing locations values by default when the page loads.
-    this.filteredLocationList = this.housingLocationList;
+   
   }
   // Update the constructor for the HomeComponent to set the value.
   filterResults(text: string) {

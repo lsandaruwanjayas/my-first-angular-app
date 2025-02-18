@@ -7,7 +7,9 @@ import {HousingLocation} from './housinglocation';
 })
 //copy and add the housingLocationList variable and its array value 
 export class HousingService {
+ //Add a string property called url and set its value to 'http://localhost:3000/locations'
  readonly baseUrl = 'homes-photos';
+ url = 'http://localhost:3000/locations';
    housingLocationList: HousingLocation[] = [
      {
        id: 0,
@@ -111,11 +113,15 @@ export class HousingService {
      },
    ];
 //These functions allow dependencies to access the service's data
-   getAllHousingLocations(): HousingLocation[] {
-    return this.housingLocationList;
+//Update the getAllHousingLocations function to make a call to the web server you configured.
+   async getAllHousingLocations(): Promise<HousingLocation[]> {
+    const data = await fetch(this.url);
+    return (await data.json()) ?? [];
   }
-  getHousingLocationById(id: number): HousingLocation | undefined {
-    return this.housingLocationList.find((housingLocation) => housingLocation.id === id);
+  //Update the getHousingLocationsById function to make a call to the web server you configured
+  async getHousingLocationById(id: number): Promise<HousingLocation | undefined> {
+    const data = await fetch(`${this.url}/${id}`)
+    return (await data.json()) ?? {};
   }
 //adds a method to your app's service that receives the form data to send to the data's destination
   submitApplication(firstName: string, lastName: string, email: string) {
