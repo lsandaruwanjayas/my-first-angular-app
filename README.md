@@ -1,6 +1,6 @@
 # MyFirstAngularApp
 
-Live preview: https://clinquant-yeot-761f82.netlify.app
+Live preview: https://my-first-angular-app-lsandaruwanjayas-projects.vercel.app/
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.1.
 
