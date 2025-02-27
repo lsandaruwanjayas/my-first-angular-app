@@ -40,5 +40,10 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "typescript": "~5.7.2"
-  }
+  },
+  "description": "Live preview: https://my-first-angular-app-lsandaruwanjayas-projects.vercel.app/",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
