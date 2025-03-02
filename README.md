@@ -2,6 +2,20 @@
 
 Live preview: https://my-first-angular-app-lsandaruwanjayas-projects.vercel.app/
 
+Run <code>json-server --watch db.json</code> command to fetch data
+
+<h2>Home page</h2>
+
+![alt text](image.jpg)
+
+<h2>Location details</h2>
+
+![alt text](image-1.jpg)
+
+<h2>Search</h2> 
+
+![alt text](image-2.jpg)
+
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.1.
 
 ## Development server
